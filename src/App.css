@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  #root {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+}
+
+@layer components {
+  .custom-full-height {
+    min-height: calc(100vh - 52px) !important;
+  }
+
+  @media screen and (min-width: 640px) {
+    .custom-full-height {
+      min-height: calc(100vh - 69px) !important;
+    }
+  }
+
+  .custom-layout-full {
+    @apply mx-auto max-w-[1920px] px-5 sm:px-12;
+  }
+
+  .custom-layout-content {
+    @apply mx-auto max-w-4xl px-5 sm:px-12;
+  }
+
+  .custom-text-38to32 {
+    @apply text-[34px] font-bold leading-[1.6] text-gray-900 duration-mainTime dark:text-mainWhite md:text-[40px];
+  }
+
+  .custom-text-36to30 {
+    @apply text-[30px] font-bold leading-[1.6] text-gray-900 duration-mainTime dark:text-mainWhite md:text-[36px];
+  }
+
+  .custom-text-32to27 {
+    @apply text-[27px] font-bold leading-[1.6] text-gray-900 duration-mainTime dark:text-mainWhite md:text-[32px];
+  }
+
+  .custom-text-28to26 {
+    @apply text-[26px] leading-normal text-gray-900 duration-mainTime dark:text-mainWhite sm:text-[28px];
+  }
+
+  .custom-text-18to16 {
+    @apply text-[16px] leading-[1.8] text-mainGray duration-mainTime dark:text-mainOffWhite sm:text-[18px];
+  }
+
+  .custom-text-16to14 {
+    @apply text-[14px] leading-[1.8] text-mainGray duration-mainTime dark:text-mainOffWhite sm:text-[16px];
+  }
+
+  .custom-text-14to12 {
+    @apply text-[12px] leading-[1.8] text-mainGray duration-mainTime dark:text-mainOffWhite sm:text-[14px];
+  }
+
+  .custom-bg-colored {
+    @apply bg-[#fafafa] pb-6 pt-3 dark:bg-darkThemaBlack;
+  }
+}
